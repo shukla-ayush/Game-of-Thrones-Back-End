@@ -1,0 +1,22 @@
+CS 5200 Project Back End Repository
+By Javesh Monga and Ayush Shukla
+
+This repository contains the back end python flask middleware services in servery.py as well as our MySql data dump file.
+
+Dev Envirenment setup:
+1) First make sure you have python 2.7.16 installed
+  you can download it from here https://www.python.org/downloads/release/python-2716/
+  (this installation will also install pip). Also install mysql (along with MySql Workbench) on your pc.
+2) Then run the MySql Dump file called gotdump.sql in workbench to get the schema as well as all the data of our application.
+3) To install the dependencies run $ pip install -r requirements.txt in the project directory.
+4) Now to configure the local database to run with the python flask server, set the following environment variables accordingly (a sample values is given below)
+    DBUSERNAME = 'root'
+    DBPASSWORD = 'root'
+    DBSCHEMA = 'gameofthrones' (this must be 'gameofthrones' as our dump creates a schema of that name)
+    DBHOSTNAME = localhost (would be localhost if running locally)
+    
+    Alternatively you can also change these values directly in server.py, under the comment #MySQL configurations.
+    
+5)Run Python server.py
+
+The app will start running on localhost:5000
